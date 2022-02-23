@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <title>Teste-Ricgley</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body onload="iniciaSlider()">
+    <div class="content">
+        <div class="ladoE">
+            <div class="titulo">
+                <h1>Teste Desenvolvedor(a)</h1>
+                <p>idm.business</p>
+                <br>
+            </div>    
+            <div class="iconFace">
+                <a href="https://www.facebook.com/" target="_self">
+                    <div class="logo">
+                        <img src="imagens/icon/logoface.png">
+                    </div>
+                </a>
+                <div class="option">                   
+                    <button class="iconDot">
+                        <i class="material-icons">more_horiz</i>
+                    </button>
+                </div>                
+            </div>
+            <form>
+                <div>
+                    <h2>Crie seu perfil</h2>
+                </div>                
+                <fieldset>
+                    <input type="text" placeholder="Seu primeiro nome" id="nome" required/>
+                    <div class="data">
+                        <select onchange="selectChage('dia')" placeholder="Dia" id="dia">
+                            <option value="0" disabled selected>Dia</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <select onchange="selectChage('mes')" placeholder="Mês" id="mes">
+                            <option value="0" disabled selected>Mês</option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                        <select onchange="selectChage('ano')" placeholder="Ano" id="ano">
+                            <option value="0" disabled selected>Ano</option>
+                        </select>
+                    </div>
+                    <div class="campoLabel">
+                        <input type="text" placeholder="Inserir localização" id="localizacao" required>
+                        <label>ex: São Paulo, Brasil</label>
+                    </div>
+                    <div class="sexo">                     
+                        <input type="radio" name="sexo" id="masculino" ><label>Masculino</label>                                            
+                        <input type="radio" name="sexo" id="feminino"><label>Feminino</label>
+                    </div>
+                        <input type="text" placeholder="E-mail ou número de celular" id="email" required>
+                    <div class="campoLabel">
+                        <input type="password" placeholder="Crie sua senha" id="senha" required>
+                        <label id="text-senha">Senha deve conter ao menos 5 caracteres</label>
+                    </div>
+                    <input class="botaoCadastro" type="submit" name="Enviar" value="Cadastrar-se"/>
+                </fieldset>
+            </form>
+        </div>
+        <div class="ladoD">
+            <div class="barra">
+                <div class="barraE">            
+                    <button class="gostei">
+                        <i class="material-icons">favorite</i>
+                    </button>
+                    <button class="naocurti">
+                        <i class="material-icons">close</i>
+                    </button>
+                    <div class="barraTexto">
+                        <div style="display:flex; align-items: center;">
+                            <div class="ponto"></div>
+                            <p>Carine, 30</p>
+                        </div>
+                        <div style="display:flex; margin-left: 16px;align-items: center;">
+                            <p class="numInteresse">0</p>
+                            <p class="textInteresse">interesses<br>
+                                dela</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="barraD">
+                    <button class="perfil" title="Perfil">
+                        <i class="material-icons">person_outline</i>
+                    </button>
+                    <button class="star" title="Favorito">
+                        <i class="material-icons">star_border</i>
+                    </button>
+                    <button class="config" title="Configurações">
+                        <i class="material-icons">tune</i>
+                    </button>
+                </div>
+            </div>            
+            <div class="backgroundSlider"> 
+                <div class="camera">
+                    <i class="material-icons">linked_camera</i>
+                    <p id="contador">1 / 10</p>   
+                </div>           
+                <div class="botaoE">
+                    <img src="imagens/icon/botaoE.png" onclick="ante()" />    
+                </div>                    
+                <div id="slider"></div>
+                <div class="botaoD">
+                    <img src="imagens/icon/botaoD.png" onclick="prox()" />    
+                </div>                       
+            </div>
+        </div>
+    </div>
+    <script>
+        var select = document.getElementById("ano");
+        for (i = 1950; i < 2023; i++) {
+            var opt = document.createElement('option');
+            opt.value = i;
+            opt.innerHTML = i;
+            select.appendChild(opt);
+        }
+        function selectChage(id) {
+            var select = document.getElementById(id);    
+            select.className = select.ClassName + " diaS";
+        }
+        function iniciaSlider() {
+            max = 10;
+            min = 1;
+            fi = min;
+            trans = true;
+            carregaFoto(" imagens/mulher/mulher1.png");
+            document.getElementById("slider").addEventListener("transitionend", fimTrans);
+        } 
+        function fimTrans() {
+            trans = true;
+        } 
+        function carregaFoto(foto) {
+            document.getElementById("slider").style.backgroundImage = "URL(" + foto + ")";
+        } 
+        function prox() {
+            if (trans) {
+                trans = false; 
+                fi++; 
+                if (fi > max) {fi = min; }
+                carregaFoto("imagens/mulher/mulher" + fi + ".png");
+                document.getElementById("contador").innerHTML=(fi + " / 10");
+            }
+        }
+        function ante() {
+            if (trans) {
+                trans = false;
+                fi--;
+                if (fi < min) { fi = max; } 
+                carregaFoto("imagens/mulher/mulher" + fi + ".png");
+                document.getElementById("contador").innerHTML=(fi + " / 10");
+            }
+        }
+    </script>
+</body>
+</html>

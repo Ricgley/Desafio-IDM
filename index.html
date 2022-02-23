@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        #slider {
+            width: 600px;
+            height: 450px;
+            background-color: black;
+            transition: background-image 1s;
+
+        }
+    </style>
+
+</head>
+
+<body onload="iniciaSlider()">
+
+    <div id="slider"></div>
+
+    
+    <div class="botaoE">
+        <img src="imagens/icon/botaoE.png" input type="button" class="botao" value="Anterior" onclick="ante()">
+        
+    </div>
+
+    <div class="botaoD">
+        <img src="imagens/icon/botaoD.png" input type="button" class="botao" value="Anterior" onclick="ante()">
+        
+    </div>
+
+    
+    <script>
+
+        function iniciaSlider() {
+            max = 10;
+            min = 1;
+            fi = min;
+            trans = true;
+            carregaFoto(" imagens/mulher/mulher1.png");
+            document.getElementById("slider").addEventListener("transitionend", fimTrans);
+        } function fimTrans() {
+            trans = true;
+        } function carregaFoto(foto) {
+            document.getElementById("slider").style.backgroundImage = "URL("
+                + foto + ")";
+        } function prox() {
+            if (trans) {
+                trans = false; fi++; if (fi > max) {
+                    fi = min;
+                }
+                carregaFoto("imagens/mulher/mulher" + fi + ".png");
+            }
+        }
+
+        function ante() {
+            if (trans) {
+                trans = false;
+                fi--;
+                if (fi < min) { fi = max; } carregaFoto("imagens/mulher/mulher" + fi + ".png");
+            }
+        } </script>
+
+</body>
+
+</html>
